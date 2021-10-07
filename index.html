@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"></link>
+    <title>Logo</title>
+</head>
+<body>
+    <div class="wheel">
+        <div class="inner-wheel">
+            <div class="hub"></div>
+            <h2 class="initials">BH</h2>
+        </div>
+    </div>
+    <script>
+        const innerWheel = document.querySelector(".inner-wheel");
+        let rotateDegrees = 0;
+        for (let i = 0; i < 4; i++) {
+            const spoke = document.createElement("div");
+            spoke.setAttribute("class", "spoke");
+            spoke.setAttribute("style", `transform: rotate(${rotateDegrees}deg)`);
+            innerWheel.append(spoke);
+            rotateDegrees += 360 / 8;
+        }
+    </script>
+</body>
+</html>

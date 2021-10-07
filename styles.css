@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+* {
+  box-sizing: border-box;
+}
+:root {
+  --black: rgb(12, 12, 12);
+  --white: rgb(245, 240, 240);
+  --tan: rgb(179, 137, 61);
+  --silver: rgba(192, 192, 192, 0.938);
+
+  --background: var(--white);
+  --tire: var(--black);
+  --gumwall: var(--tan);
+  --rim: var(--silver);
+  --spoke: var(--black);
+}
+body {
+  background-color: #0c8d03;
+}
+.wheel {
+  height: 175px;
+  width: 175px;
+  border: 0px solid var(--tire);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--tire), inset 0 0 0 8px var(--gumwall),
+    inset 0 0 0 12px var(--rim);
+}
+.inner-wheel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.hub {
+  height: 30px;
+  width: 30px;
+  background-color: var(--black);
+  border-radius: 50%;
+  position: absolute;
+  top: 75.5px;
+  right: 75.5px;
+  transform: translate(2px, -1px);
+}
+.spoke {
+  height: 2px;
+  width: 155px;
+  background-color: var(--spoke);
+  position: absolute;
+  top: 49.5%;
+  left: 10px;
+  z-index: -1;
+}
+.initials {
+  position: absolute;
+  right: 26%;
+  top: -32%;
+  font-size: 6em;
+  color: red;
+  transform: rotate(-25deg);
+  font-family: "Birthstone", cursive;
+}
